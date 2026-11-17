@@ -1,0 +1,6 @@
+HdmiCec:
+  command: cec_message
+  description: Broadcast vendor ID 0x0019FB from playback device 4
+  message:
+    user_defined: true
+    payload: ["0x4F", "0x87", "0x00", "0x19", "0xFB"]

@@ -1,0 +1,36 @@
+HdmiCec:
+  command: configure
+  description: Configure a small TV and playback-device topology for Sink tests
+  config:
+    emulated_device:
+      name: "VTV"
+      language: "eng"
+      cec_version: "1.4"
+      device_type: "TV"
+      power_status: "on"
+      port_id: 0
+      fault: no
+      number_of_ports: 4
+      active_source: false
+    device_map:
+      - device:
+        name: "VTV"
+        language: "eng"
+        cec_version: "1.4"
+        device_type: "TV"
+        power_status: "on"
+        port_id: 0
+        fault: no
+        number_of_ports: 4
+        active_source: false
+        children:
+          - device:
+            name: "SinkTestPlayer"
+            language: "eng"
+            cec_version: "1.4"
+            device_type: "PlaybackDevice"
+            power_status: "on"
+            port_id: 0
+            fault: no
+            number_of_ports: 0
+            active_source: false
